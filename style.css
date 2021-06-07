@@ -137,11 +137,11 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width: 480px) {
+@media all and (min-width: 600px) {
   header {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 0;
   }
 
 
@@ -176,12 +176,13 @@ footer p {
   
   form select, form input {
     margin-bottom: 0px;
+    width: 100%;
   }
 
-  .logo { /* this resizes the logo for larger screens */
-    font-family: "Pangolin", cursive;
-    font-size: 38px;
-    color: #fff;
+  .logo {
+    margin: 8px 0 10px 10px;
+    padding-top: 0;
+    font-size: 32px
   }
 
   
