@@ -34,6 +34,7 @@ main img {
   width: 100%;
 }
 
+
 /* ---  Groups & Items --- */
 
 .group {
@@ -91,12 +92,15 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
+  flex-wrap: wrap;
   border: 2px solid #ff385c;
   padding: 10px;
 }
 
 form label {
   font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 5px;
 }
 
 form div {
@@ -107,9 +111,10 @@ form div {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  width: 200px;
 }
 
+/* this will customize the search button */
 form button {
   background-color: #ff385c;
   border: none;
@@ -132,21 +137,16 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width: 600px) {
+@media all and (min-width: 480px) {
   header {
     display: flex;
     justify-content: space-between;
-    padding: 0;
+    padding: 10px;
   }
 
-  .logo {
-    font-size: 42px;
-    margin: 14px 0 14px 20px;
-    padding-top: 0;
-  }
 
   header nav ul {
-    align-items: center
+    align-items: center;
   }
 
   .group {
@@ -154,15 +154,21 @@ footer p {
     align-items: center;
   }
 
+  .item {
+    flex: 1;
+  }
+
+   
   form {
     display: flex;
-    align-items: center;
+    align-items: center;   /*responsive design to keep the search from centered*/
     justify-content: center;
   }
 
   form div {
     flex-direction: column;
   }
+  
 
   form button {
     flex: 1;
@@ -172,4 +178,11 @@ footer p {
     margin-bottom: 0px;
   }
 
+  .logo { /* this resizes the logo for larger screens */
+    font-family: "Pangolin", cursive;
+    font-size: 38px;
+    color: #fff;
+  }
+
+  
 }
